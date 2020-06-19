@@ -1,0 +1,31 @@
+#+TITLE: oq
+
+Org query tool to manipulate emacs lisp expression of org documents, inspired by jq
+
+* Usage
+
+Inside an org document
+#+begin_src text
+  M-x oq
+#+end_src
+
+You will see two buffers: "*oq - query*" and "*oq - output*".
+
+Write an expression in the query buffer and press =C-c C-c= to see the result in the output buffer
+
+* Syntax
+
+  - =N= to grab the Nth child of the current element (starting from 0)
+  - =:prop= to print the property prop the element
+  - ='name= to iterate over all elements matching that name
+
+** Example
+   See the [[sample.org]] document, a simple query can be
+
+   #+begin_src text
+     1 'headline :raw-value
+   #+end_src
+
+   1. grab the second element from root ("Another Section")
+   2. iterate over every =headline= child element
+   3. print the =:raw-value= of every item
