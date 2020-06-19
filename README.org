@@ -29,3 +29,8 @@ Write an expression in the query buffer and press =C-c C-c= to see the result in
    1. grab the second element from root ("Another Section")
    2. iterate over every =headline= child element
    3. print the =:raw-value= of every item
+
+   Result in the output buffer:
+   #+begin_src text
+     (Another section why not more entries clever name here)
+   #+end_src
